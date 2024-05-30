@@ -1,0 +1,10 @@
+git:
+  log:
+    showWholeGraph: true
+gui:
+  showFileTree: false
+  commandLogSize: 16
+  filterMode: 'fuzzy'
+  parseEmoji: true
+os:
+  editPreset: 'sublime'

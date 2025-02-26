@@ -1,0 +1,15 @@
+// Settings in here override those in "LSP-json/LSP-json.sublime-settings"
+{
+    "settings": {
+        "userSchemas": [
+            {
+                "fileMatch": ["*.css-data.json"],
+                "uri": "https://raw.githubusercontent.com/microsoft/vscode-css-languageservice/main/docs/customData.schema.json"
+            },
+            {
+                "fileMatch": ["*.html-data.json"],
+                "uri": "https://raw.githubusercontent.com/microsoft/vscode-html-languageservice/main/docs/customData.schema.json"
+            }
+        ]
+    }
+}

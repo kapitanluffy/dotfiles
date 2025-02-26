@@ -1,0 +1,78 @@
+{
+	"ignored_packages":
+	[
+		"LSP-pyright",
+		"SideBarTools",
+		"SublimeLinter",
+		"SublimeLinter-contrib-phpstan",
+		"SublimeLinter-php",
+		"Vintage",
+	],
+	"color_scheme": "Deep Space Duck.sublime-color-scheme",
+	"theme": "Adaptive.sublime-theme",
+	"auto_hide_menu": false,
+	"reveal_menu": true,
+	"show_rel_path": false,
+	"index_files": false,
+	"relative_line_numbers": true,
+	"fade_fold_buttons": false,
+	"trim_trailing_white_space_on_save": "all",
+	"font_size": 9,
+	"highlight_line": true,
+	"draw_white_space": [
+		"selection",
+		"leading_mixed",
+		"isolated",
+		"trailing"
+	],
+	"shift_tab_unindent": true,
+	"translate_tabs_to_spaces": true,
+	"ensure_newline_at_eof_on_save": true,
+	// "font_face": "Berkeley Mono",
+	"font_face": "TX-02",
+	// "font_face": "Lilex",
+	// "font_face": "Cascadia Code NF",
+	"theme_font_options": ["ss01", "ss02", "ss03", "ss04", "ss19", "ss20"],
+	"font_options": ["ss01", "ss02", "ss03", "ss04", "ss19", "ss20"],
+	"rulers": [80, 120],
+	// only detects on load
+	"detect_indentation": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".Trash",
+		".Trash-*",
+		"**/dist/*"
+	],
+	"index_exclude_patterns":
+	[
+		"*.log",
+		"dist/*",
+		"**/dist/*",
+	],
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"dist/*",
+		"**/dist/*",
+		"**/node_modules/*",
+		"node_modules/*",
+		"*/node_modules/*"
+	],
+	"syntax_detection_size_limit": 33554432,
+}

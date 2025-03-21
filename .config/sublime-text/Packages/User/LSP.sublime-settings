@@ -18,7 +18,7 @@
 	"initially_folded":
 	[
 		"comment",
-		"imports",
+		// "imports",
 		"region",
 		"block"
 	],

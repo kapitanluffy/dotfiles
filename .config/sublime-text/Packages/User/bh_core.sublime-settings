@@ -1,4 +1,7 @@
 {
 
-    "content_highlight_bar": true
+    "content_highlight_bar": true,
+
+    // Ignore threshold
+    "ignore_threshold": true,
 }

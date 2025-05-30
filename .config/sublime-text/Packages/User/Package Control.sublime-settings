@@ -2,7 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"LSP-pyright",
 	],
 	"installed_packages":
 	[
@@ -12,6 +11,7 @@
 		"CloseTagsExtended",
 		"CommandsBrowser",
 		"Compass Navigator",
+		"Curly Syntax Definition",
 		"Deep Space Duck",
 		"DocBlockr 2021 (DoxyDoxygen powered)",
 		"Dockerfile Syntax Highlighting",
@@ -20,8 +20,10 @@
 		"Elevator",
 		"FilesAndFolders",
 		"Git Conflict Resolver",
+		"GitDiffView",
 		"GitGutter",
 		"GitSavvy",
+		"GraphQL",
 		"gruvbox",
 		"JsPrettier",
 		"KDL",
@@ -50,6 +52,7 @@
 		"Package Control",
 		"PackageDev",
 		"PackageResourceViewer",
+		"PackagesUI",
 		"PostgreSQL Syntax Highlighting",
 		"Pretty JSON",
 		"Selenized Color Scheme",

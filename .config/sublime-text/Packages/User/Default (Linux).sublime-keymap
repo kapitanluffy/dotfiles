@@ -207,6 +207,18 @@
             }
         }
     },
+    // BH workaround for jsx/tsx
+    {
+        "keys": ["ctrl+shift+["],
+        "command": "fold",
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "(source.tsx, source.jsx) & meta.jsx"
+            }
+        ]
+    },
     // Swap brackets
     {
         "keys": ["alt+[", "up"],

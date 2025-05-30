@@ -1,1 +1,7 @@
 .oh-my-zsh/custom/plugins/
+
+*.hidden-color-scheme
+
+OverrideAudit.status
+
+*.user-ca-bundle

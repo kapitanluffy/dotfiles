@@ -1,0 +1,367 @@
+# organize configuration file
+# https://organize.readthedocs.io
+
+rules:
+  - name: "Find All Screenshots"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - mimetype: image
+      - regex: '^Screenshot '
+    actions:
+      - echo: "{path}"
+      - move: ~/ORGANIZE/ORGANIZE_SCREENSHOTS/
+    tags:
+      - images
+
+  - name: "Find All images"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - png
+        - gif
+        - jpg
+        - jpeg
+        - webp
+        - svg
+        - psd
+        - jfif
+    actions:
+      - echo: "{path} {extension}"
+      - move: ~/ORGANIZE/ORGANIZE_IMAGES/
+    tags:
+      - images
+
+  - name: "Find All Videos"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - mp4
+        - mov
+        - webm
+        - mkv
+    actions:
+      - echo: "{path}"
+      - move: ~/ORGANIZE/ORGANIZE_VIDEOS/
+    tags:
+      - videos
+
+  - name: "Find All Audios"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - mp3
+        - m3u
+        - wav
+    actions:
+      - echo: "{path}"
+      - move: ~/ORGANIZE/ORGANIZE_AUDIOS/
+    tags:
+      - audios
+
+  - name: "Find All text files"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - txt
+        - js
+        - json
+        - sql
+        - log
+        - yml
+        - md
+        - csv
+        - ps1
+        - tsx
+        - ts
+        - srt
+        - bat
+        - xml
+        - sh
+        - php
+        - toml
+        - html
+    actions:
+      - echo: "{path}"
+      - move: ~/ORGANIZE/ORGANIZE_TEXT/
+    tags:
+      - text
+
+  - name: "Find All Installers"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - exe
+        - msi
+        - msix
+        - appinstaller
+    actions:
+      - echo: "{path}"
+      - move: ~/ORGANIZE/ORGANIZE_INSTALLERS/
+    tags:
+      - exes
+
+  - name: "Find All PDFs"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension: pdf
+    actions:
+      - echo: "{path}"
+      - move: ~/ORGANIZE/ORGANIZE_PDFS/
+
+  - name: "Move All Extracted Archive Directories"
+    targets: "dirs"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - size
+      - python: |
+          import os
+          strpth = str(path)
+          if os.path.exists(strpth + ".zip"): return path
+          if os.path.exists(strpth + ".7z"): return path
+          if os.path.exists(strpth + ".rar"): return path
+          if os.path.exists(strpth + ".tar.gz"): return path
+          if os.path.exists(strpth + ".gz"): return path
+          return None
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_EXTRACTED_ARCHIVES/
+    tags:
+      - archives
+
+  - name: "Remove All Extracted Archives"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - zip
+        - 7z
+        - rar
+        - tar.gz
+        - gz
+      - size
+      - python: |
+          import os
+          if os.path.exists(os.path.join(path.parent, "ORGANIZE_EXTRACTED_ARCHIVES", path.stem)): return path
+          if os.path.exists(os.path.join(path.parent, "ORGANIZE_EXTRACTED_ARCHIVES", path.stem)): return path
+          if os.path.exists(os.path.join(path.parent, "ORGANIZE_EXTRACTED_ARCHIVES", path.stem)): return path
+          if os.path.exists(os.path.join(path.parent, "ORGANIZE_EXTRACTED_ARCHIVES", path.stem)): return path
+          return None
+    actions:
+      - trash
+    tags:
+      - archives
+
+  - name: "Find All Remaining Zips"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - size
+      - extension:
+        - zip
+        - 7z
+        - rar
+        - tar.gz
+        - gz
+        - jar
+        - iso
+    actions:
+      - echo: "{relative_path} {size.traditional}"
+      - move: ~/ORGANIZE/ORGANIZE_ARCHIVES/
+    tags:
+      - archives
+
+  - name: "Find All fonts"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - otf
+        - ttf
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_FONTS/
+    tags:
+      - fonts
+
+  - name: "Find All doc files"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - xls
+        - xlsx
+        - xlsb
+        - doc
+        - docx
+
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_DOCS/
+    tags:
+      - excel
+
+  - name: "Find All torrents"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - torrent
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_TORRENTS/
+    tags:
+      - torrents
+
+  - name: "Find All rainmeter skins"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - rmskin
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_RAINMETER/
+    tags:
+      - rainmeter
+
+  - name: "Find All excalidraws"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - excalidraw
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_EXCALIDRAW/
+    tags:
+      - excalidraw
+
+  - name: "Remove unfinished downloads"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - extension:
+        - part
+    actions:
+      - trash
+    tags:
+      - unfinished
+
+  - name: "Move All project directories"
+    targets: "dirs"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - size
+      - python: |
+          import os
+          import re
+          strpth = str(path)
+          if re.search(r'ORGANIZE_.*$', strpth): return None
+          if os.path.exists(os.path.join(strpth, ".gitignore")): return path
+          if os.path.exists(os.path.join(strpth, ".gitattributes")): return path
+          if os.path.exists(os.path.join(strpth, "README.md")): return path
+          if os.path.exists(os.path.join(strpth, "package.json")): return path
+          return None
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_PROJECTS/
+    tags:
+      - projects
+
+  - name: "Move single file directories"
+    targets: "dirs"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - size
+      - python: |
+          import os
+          import re
+          strpth = str(path)
+          if re.search(r'ORGANIZE_.*$', strpth): return None
+          total = sum(1 for f in os.listdir(strpth) if os.path.isfile(os.path.join(strpth, f)))
+          if total==1: return {"total":total}
+          return None
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_REVIEW_SINGLE/
+    tags:
+      - review
+
+  - name: "Move directories with single directories"
+    targets: "dirs"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - size
+      - python: |
+          import os
+          import re
+          strpth = str(path)
+          if re.search(r'ORGANIZE_.*$', strpth): return None
+          total = sum(1 for f in os.listdir(strpth) if os.path.isdir(os.path.join(strpth, f)))
+          if total==1: return {"total":total}
+          return None
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_REVIEW_SINGLEDIR/
+    tags:
+      - review
+
+  - name: "Move all remaining and old files"
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - lastmodified:
+          years: 1
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_OTHERS/
+    tags:
+      - others
+      - old
+
+  - name: "Remove all empty folders"
+    targets: dirs
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - empty
+    actions:
+      - trash
+    tags:
+      - empty
+
+  - name: "Move all old directories for review"
+    targets: dirs
+    locations:
+      - ~/Downloads
+      - E:/Home/Downloads
+    filters:
+      - lastmodified:
+          years: 1
+    actions:
+      - move: ~/ORGANIZE/ORGANIZE_REVIEW_OLD/
+    tags:
+      - old
+      - review

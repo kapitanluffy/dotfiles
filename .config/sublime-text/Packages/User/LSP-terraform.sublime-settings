@@ -1,0 +1,7 @@
+// Settings in here override those in "LSP-terraform/LSP-terraform.sublime-settings"
+{
+    "initializationOptions": {
+        "experimentalFeatures.validateOnSave": true,
+        "validation.enableEnhancedValidation": true
+    }
+}

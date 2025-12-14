@@ -3,12 +3,22 @@
     "settings": {
         "userSchemas": [
             {
-                "fileMatch": ["*.css-data.json"],
+                "fileMatch": [
+                    "*.css-data.json"
+                ],
                 "uri": "https://raw.githubusercontent.com/microsoft/vscode-css-languageservice/main/docs/customData.schema.json"
             },
             {
-                "fileMatch": ["*.html-data.json"],
+                "fileMatch": [
+                    "*.html-data.json"
+                ],
                 "uri": "https://raw.githubusercontent.com/microsoft/vscode-html-languageservice/main/docs/customData.schema.json"
+            },
+            {
+                "fileMatch": [
+                    "cloudformation-template-update-stack.json"
+                ],
+                "uri": "https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json"
             }
         ]
     }

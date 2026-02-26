@@ -1,13 +1,11 @@
 {
-	"ignored_packages":
-	[
+	"ignored_packages": [
 		"Curly Syntax Definition",
-		"LSP-copilot",
-		"LSP-yaml",
+		"GitDiffView",
+		"SideBarTools",
 		"SublimeLinter",
 		"SublimeLinter-contrib-phpstan",
 		"SublimeLinter-php",
-		"Theme - Monokai Pro",
 		"Vintage",
 	],
 	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Hard).sublime-color-scheme",
@@ -77,4 +75,12 @@
 		"*/node_modules/*"
 	],
 	"syntax_detection_size_limit": 33554432,
+	"reload_file_on_change": true,
+	"gruvbox_highlight_active_tree_row": true,
+	"gruvbox_autocomplete_cozy": true,
+	"gruvbox_autocomplete_border": true,
+	"gruvbox_sidebar_heading_bold": true,
+	"gruvbox_statusbar_xs": true,
+	"gruvbox_statusbar_button_xxs": true,
+	"reload_file_in_background": true,
 }

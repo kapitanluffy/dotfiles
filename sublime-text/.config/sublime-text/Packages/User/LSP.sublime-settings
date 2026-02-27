@@ -1,10 +1,8 @@
 // Settings in here override those in "LSP/LSP.sublime-settings"
 {
-	
 	"refactoring_auto_save": "preserve_opened",
 	"document_highlight_style": "",
-	"lsp_code_actions_on_save":
-	{
+	"lsp_code_actions_on_save": {
 		"source.fixAll.eslint": true,
 		// "source.fixAll.ts": true,
 		"source.addMissingImports.ts": true,
@@ -13,13 +11,16 @@
 		// cannot run with addMissingImports
 		// "source.organizeImports.ts": true,
 		// "source.sortImports.ts": true,
+
+		// Golang
+		"source.organizeImports.go": true,
 	},
-	"inhibit_word_completions": false,
-	"initially_folded":
-	[
+	"inhibit_word_completions": true,
+	"initially_folded": [
 		"comment",
 		// "imports",
 		"region",
 		"block"
 	],
+	"lsp_format_on_save": true,
 }

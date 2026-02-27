@@ -1,9 +1,0 @@
-theme = catppuccin-mocha
-font-family = TX-02 Regular
-font-size = 8
-background-opacity = 0.9
-shell-integration-features = true
-
-# custom-shader-animation = true
-# custom-shader = ghostty-shaders/tft.glsl
-# custom-shader = ghostty-shaders/cubes.glsl

@@ -1,0 +1,13 @@
+# OpenGL problem
+# https://github.com/ghostty-org/ghostty/discussions/3159#discussioncomment-11706139
+
+theme = catppuccin-mocha
+font-family = TX-02 Light
+font-size = 16
+background-opacity = 0.8
+shell-integration-features = true
+# gtk-single-instance = true
+
+# custom-shader-animation = true
+# custom-shader = ghostty-shaders/tft.glsl
+# custom-shader = ghostty-shaders/cubes.glsl

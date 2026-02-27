@@ -1,4 +1,6 @@
 {
     "pretty_on_save": false,
     "validate_on_save": false,
+    "jq_binary": "/usr/bin/jq",
+    "jq_errors": true,
 }

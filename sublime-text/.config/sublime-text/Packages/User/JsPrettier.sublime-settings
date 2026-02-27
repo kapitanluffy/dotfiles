@@ -1,15 +1,13 @@
 // Settings in here override those in "/JsPrettier/JsPrettier.sublime-settings",
-
 {
     "debug": true,
     "auto_format_on_save": true,
     // "node_path": "$HOME/.asdf/shims/node",
     "auto_format_on_save_requires_prettier_config": true,
-    "additional_cli_args":
-    {
+    "additional_cli_args": {
         // "--config": "${folder}/.prettierrc.json",
         // "--ignore-path": "${folder}/.prettierignore",
     },
     "prettier_cli_path": "$HOME/.asdf/shims/prettier",
-    // "disable_prettier_cursor_offset": true
+    // "disable_prettier_cursor_offset": true,
 }

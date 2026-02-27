@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # asdf version manager
-. "$HOME/.asdf/asdf.sh"
+# . "$HOME/.asdf/asdf.sh"
 
 # Let's migrate to asdf
 # export NVM_DIR="$HOME/.nvm"
@@ -112,15 +112,16 @@ bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
 
-export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.yarn/bin:$PATH
+export PATH=$ASDF_DATA_DIR/shims:$PATH
 export NOTICA_KEY=xjFeD3
 export LESS="-SRXF"
 export EDITOR="subl -w"
+export BUZZHEAVIER_ACCOUNT_ID=O1DEJC7XT6HRP5Q1C4DZ
 
 notica() {
   curl --data "d:$*" "https://notica.us/?$NOTICA_KEY"
 }
-
 
 . "$HOME/.asdf/asdf.sh"
 
@@ -137,8 +138,20 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 alias l='ls -lav'
+alias bat="batcat"
 
 # copy_buffer() {
 #   printf %s "$READLINE_LINE" | xclip -sel clipboard
 # }
 # bindkey -x '"\C-[c": "copy_buffer"'
+
+alias clip='xclip -selection clipboard'
+
+# Make globbing behave like bash
+unsetopt nomatch
+
+# enable beep
+setopt beep
+
+# activate mise
+eval "$($HOME/.local/bin/mise activate zsh)"

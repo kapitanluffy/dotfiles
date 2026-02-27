@@ -8,8 +8,8 @@
 		"SublimeLinter-php",
 		"Vintage",
 	],
-	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Hard).sublime-color-scheme",
-	"theme": "gruvbox.sublime-theme",
+	"color_scheme": "Monokai Pro (Filter Machine).sublime-color-scheme",
+	"theme": "Monokai Pro (Filter Machine).sublime-theme",
 	"auto_hide_menu": false,
 	"reveal_menu": true,
 	"show_rel_path": false,
@@ -17,7 +17,7 @@
 	"relative_line_numbers": true,
 	"fade_fold_buttons": false,
 	"trim_trailing_white_space_on_save": "all",
-	"font_size": 10,
+	"font_size": 16,
 	"highlight_line": true,
 	"draw_white_space": [
 		"selection",
@@ -28,17 +28,43 @@
 	"shift_tab_unindent": true,
 	"translate_tabs_to_spaces": true,
 	"ensure_newline_at_eof_on_save": true,
-	// "font_face": "Berkeley Mono",
-	"font_face": "TX-02",
+	// "font_face": "Maple Mono NF CN Light",
+	"font_face": "Berkeley Mono",
+	// "font_face": "TX-02",
 	// "font_face": "Lilex",
 	// "font_face": "Cascadia Code NF",
-	"theme_font_options": ["ss01", "ss02", "ss03", "ss04", "ss19", "ss20"],
-	"font_options": ["ss01", "ss02", "ss03", "ss04", "ss19", "ss20"],
-	"rulers": [80, 120],
+	// "theme_font_options": ["ss01", "ss02", "ss03", "ss04", "ss19", "ss20"],
+	// [todo] @ f y u g 0
+	"font_options": [
+		"calt",
+		"dlig",
+		"ss01",
+		"ss02",
+		"ss03",
+		"ss04",
+		"ss19",
+		"ss20",
+		"cv01",
+		"cv02",
+		"cv33",
+		"cv34",
+		"cv35",
+		"cv36",
+		"cv61",
+		"cv62",
+		"ss05",
+		"ss06",
+		"ss07",
+		"ss08"
+	],
+	// "font_options": ["calt", "dlig", "ss03"],
+	"rulers": [
+		80,
+		120
+	],
 	// only detects on load
 	"detect_indentation": true,
-	"folder_exclude_patterns":
-	[
+	"folder_exclude_patterns": [
 		".svn",
 		".git",
 		".hg",
@@ -47,14 +73,12 @@
 		".Trash-*",
 		"**/dist/*"
 	],
-	"index_exclude_patterns":
-	[
+	"index_exclude_patterns": [
 		"*.log",
 		"dist/*",
 		"**/dist/*",
 	],
-	"binary_file_patterns":
-	[
+	"binary_file_patterns": [
 		"*.jpg",
 		"*.jpeg",
 		"*.png",

@@ -1,0 +1,25 @@
+// Settings in here override those in "LSP-yaml/LSP-yaml.sublime-settings"
+{
+    "settings": {
+        "yaml.customTags": [
+            "!Ref scalar",
+            "!Sub scalar",
+            "!GetAtt scalar",
+            "!Join sequence",
+            "!If sequence",
+            "!Equals sequence",
+            "!Not sequence",
+            "!Or sequence",
+            "!And sequence",
+            "!FindInMap sequence",
+            "!ImportValue scalar",
+            "!Select sequence",
+            "!Split sequence",
+            "!Base64 scalar",
+            "!Cidr sequence"
+        ],
+        "yaml.schemas": {
+            // "../json-schema/serverless/reference.json": "serverless.yml",
+        },
+    }
+}

@@ -1,0 +1,17 @@
+[
+    { "button": "button4", "modifiers": [], "command": "insert", "args": { "characters": "b4" } },
+    { "button": "button5", "modifiers": [], "command": "insert", "args": { "characters": "b5" } },
+    { "button": "button6", "modifiers": [], "command": "insert", "args": { "characters": "b6" } },
+    { "button": "button7", "modifiers": [], "command": "insert", "args": { "characters": "b7" } },
+    // { "button": "button8", "modifiers": [], "command": "insert", "args": { "characters": "b8" } },
+    // { "button": "button9", "modifiers": [], "command": "insert", "args": { "characters": "b9" } },
+    { "button": "button10", "modifiers": [], "command": "insert", "args": { "characters": "b10" } },
+    { "button": "button11", "modifiers": [], "command": "insert", "args": { "characters": "b11" } },
+    { "button": "button12", "modifiers": [], "command": "insert", "args": { "characters": "b12" } },
+    { "button": "button13", "modifiers": [], "command": "insert", "args": { "characters": "b13" } },
+    { "button": "button14", "modifiers": [], "command": "insert", "args": { "characters": "b14" } },
+    { "button": "button15", "modifiers": [], "command": "insert", "args": { "characters": "b15" } },
+    { "button": "button16", "modifiers": [], "command": "insert", "args": { "characters": "b16" } },
+    // { "button": "scroll_left", "modifiers": [], "command": "insert", "args": { "characters": "scroll_left" } },
+    // { "button": "scroll_right", "modifiers": [], "command": "insert", "args": { "characters": "scroll_right" } },
+]

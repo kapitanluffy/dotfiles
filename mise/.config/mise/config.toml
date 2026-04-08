@@ -1,4 +1,8 @@
 [tools]
+bun = "latest"
+gcloud = "latest"
 go = "1.25"
-java = "zulu-17"
+# java = "zulu-17"
+java = "openjdk-17.0.2"
 node = "latest"
+opencode = "latest"

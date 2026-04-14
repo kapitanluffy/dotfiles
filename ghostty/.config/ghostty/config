@@ -2,7 +2,7 @@
 # https://github.com/ghostty-org/ghostty/discussions/3159#discussioncomment-11706139
 macos-option-as-alt=true
 
-theme = catppuccin-mocha
+theme = catppuccin-mocha.conf
 font-family = TX-02 Light
 font-size = 16
 background-opacity = 0.8
